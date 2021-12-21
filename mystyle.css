@@ -1,0 +1,37 @@
+.jumbo {
+    height: 40rem;
+    background-image: url('bild2.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -7rem;
+    position: relative;
+    z-index: -1;
+    background-blend-mode: overlay;
+    
+}
+/* .jumbo:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.452);
+  } */
+.box {
+    background-color: rgb(255, 255, 255);
+}
+.mar-b {
+    margin-bottom: 7rem;
+}
+.mar-t {
+    margin-top: 7rem;
+}
+.table-hover{
+    
+}
+.input_num {
+    width: 4rem;
+}
+.total {
+    max-width: 40rem;
+}

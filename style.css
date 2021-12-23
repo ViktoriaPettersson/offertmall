@@ -1,0 +1,100 @@
+.padding_x {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.padding_bottom {
+    padding-bottom: 10rem;
+}
+.padding_top {
+    padding-top: 10rem;
+}
+.header_bg {
+    background-image: url("/images/bild3.1.jpg"),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    height: 50rem;
+}
+.heading-box2 {
+  
+    height: 25rem;
+}
+.heading_text {
+    font-size: 4rem;
+    color: #1C2331;
+}
+.global_border_indigo {
+    border: 1px solid #1C2331;
+    margin: auto;
+    margin-top: 2rem;
+    width: 15rem;
+}
+.global_border_light {
+    border: 2px solid #ffffff;
+    margin: auto;
+    margin-top: 2rem;
+    width: 15rem;
+}
+.header_info {
+    margin: auto;
+}
+.about_img {
+    width: auto;
+    max-height: 25rem;
+  
+  }
+  
+
+  /* Steps */
+  .step {
+    list-style: none;
+    margin: 0;
+  }
+
+  .step-element {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .step-number {
+    position: relative;
+    width: 7rem;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .step-number .number {
+    color: #ffffff;
+    background-color: #1C2331;
+    font-size: 1.5rem;
+  }
+
+  .step-number .number {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+  }
+
+  .number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    border-radius: 10rem;
+  }
+
+  .step-number::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 48px;
+    bottom: -2rem;
+    margin-left: -1px;
+    border-left: 2px dashed #eaeff4;
+  }
+
+  .step .step-element:last-child .step-number::before {
+    bottom: 1rem;
+  }

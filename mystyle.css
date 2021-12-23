@@ -8,61 +8,108 @@
 .padding_top {
     padding-top: 10rem;
 }
-
-/*Jumbo*/
-.global_first {
-    background-color: #0c5d6b;
+h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 3rem;
 }
-.global_second {
-    background-color: #92705A;
+h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 3rem;
 }
-.global_light {
-    background-color: #ffffff6c;
+ h3, h4, h5, h6, p {
+  font-family: 'Poppins', sans-serif !important;
 }
 .jumbo {
   height: auto;
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-  background-image: url("/images/bild2.jpg"),linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-image: url("/images/bild5.1.jpg") ,
+  linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.521));;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: -1;
   background-blend-mode: overlay;
+  /* border-bottom: 5px solid #bbdefb */
 }
-.input_num {
-  width: 4rem;
+
+.header_box {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-bottom: -0rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.753);
+  border-bottom:7px solid #00897b ;
+  border-radius: 2rem;
+  padding-bottom: 2rem;
+  background-color: #ffffffce;
+ 
+
+}
+.border_green {
+  border: 1px solid #00897b ;
+  background-color: #00897b;
+  width:10%;
+  border-radius: 2rem;
+}
+.global_border {
+  border-top: 2px solid #00897b;
+  border-bottom: 2px solid #00897b;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+.green_border {
+  
 }
 
 .about_img {
-  width: auto;
+  border-radius: 2rem;
   max-height: 25rem;
-
 }
-.table-striped {
-    
+.about_section {
+  margin-top: 10rem;
 }
-.btn-add {
+.btn_global {
     border: none;
     padding: 1rem;
     border-radius: 2rem;
     width: 10rem;
     color: #ffffff;
-    background-color: #FC8F3A;
+    background-color: #00897b;
+    border: none !important;
+    outline: none !important;
 }
+
 .img_fullsize {
-  height: 40rem;
-  background-image: url("/images/bild5.jpg");
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  background-image: url("/images/bild3.1.jpg"),
+  linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));;;
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
+
 }
 .parter-box {
     background-color: #ffffff;
 }
+.table_border {
+  border-radius: 0.5rem !important;
+  border: none !important;
+  border-bottom: 5px solid #00897b !important;
+  background-color: rgb(255, 255, 255);
+}
+.bg_price {
+  background-color:#00897b0e;;
+}
+.bg_total {
 
-
+}
 
   /* Steps */
   .step {
@@ -84,7 +131,7 @@
 
   .step-number .number {
     color: #ffffff;
-    background-color: #00695c;
+    background-color: #00897b;
     font-size: 1.5rem;
   }
 
@@ -109,7 +156,7 @@
     top: 48px;
     bottom: -2rem;
     margin-left: -1px;
-    border-left: 2px dashed #eaeff4;
+    border-left: 2px dashed #00000033;
   }
 
   .step .step-element:last-child .step-number::before {

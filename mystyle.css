@@ -17,7 +17,7 @@ p {
   background-color: #c0894b;
 }
 .jumbo {
-  background-image: url("/images/img5.jpg"),
+  background-image: url("/images/img5.JPG"),
     linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));
   background-repeat: no-repeat;
   background-size: cover;

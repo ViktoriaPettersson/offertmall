@@ -39,7 +39,7 @@ p {
   padding-bottom: 1rem;
 }
 .about_img {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   max-height: 25rem;
 }
 .btn_global {
@@ -52,6 +52,11 @@ p {
   border: none !important;
   outline: none !important;
   font-weight: 700;
+  transition: transform 0.3s;
+}
+.btn_global:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
 }
 .btn_global_outline {
   /* border: none; */
@@ -64,6 +69,11 @@ p {
   background-color: #ffffff;
   /* border: none !important; */
   outline: none !important;
+  transition: transform 0.3s;
+}
+.btn_global_outline:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
 }
 .check_icon {
   font-size: 1.5rem;

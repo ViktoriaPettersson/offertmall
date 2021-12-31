@@ -4,6 +4,10 @@ const priceRow = document.querySelector(".priceRow");
 const optionRow = document.querySelector(".optionRow");
 // hämta addBtn
 const addBtn = document.querySelector(".addBtn");
+// Hämta neka-knapp
+const acceptBtn = document.querySelector(".acceptBtn");
+//Godkänn -knapp
+const denyBtn = document.querySelector(".denyBtn");
 
 // Hämta totala priset
 
@@ -113,3 +117,30 @@ const filterOption = function (check, cb_id) {
     optionvalues = optionvalues.filter((opt) => opt.id != cb_id);
   }
 };
+
+// option btns div
+const optionInnerText = document.querySelector(".option-innerText");
+
+// Accept knapp
+acceptBtn.addEventListener("click", function () {
+  optionInnerText.innerHTML = `
+  <div class="w-75">
+  <h4>Offert Godkänd</h4>
+  <div>Suscipit aperiam magnam reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatur
+  tenetur quos, quibusdam,
+  suscipit debitis.</div>
+  <div class="option-font">Viktoria. P</div>
+  </div>
+  `;
+});
+
+// Deny knapp
+denyBtn.addEventListener("click", function () {
+  optionInnerText.innerHTML = `
+  <div class="w-75">
+  <h4>Offert Nekad</h4>
+  <div>Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatar.</div>
+  <div class="option-font">Viktoria. P</div>
+  </div>
+  `;
+});

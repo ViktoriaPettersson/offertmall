@@ -13,6 +13,11 @@ h6,
 p {
   font-family: "Poppins", sans-serif !important;
 }
+.option-font {
+  font-family: "Waterfall", cursive;
+  font-size: 4rem;
+  color: #c0894b;
+}
 .tussock {
   background-color: #c0894b;
 }

@@ -8,6 +8,10 @@ const addBtn = document.querySelector(".addBtn");
 const acceptBtn = document.querySelector(".acceptBtn");
 //Godkänn -knapp
 const denyBtn = document.querySelector(".denyBtn");
+// option table
+const optionTable = document.querySelector(".option-table");
+// giltig till
+const offertDate = document.querySelector(".offert-date");
 
 // Hämta totala priset
 
@@ -65,9 +69,12 @@ addTableRow();
 //lägg in värden i valbara alternativ -tabellen
 const addOptionRow = function () {
   optionRow.innerHTML = " ";
-  optionvalues.forEach((optionVal) => {
-    //lägga in värden i tabellen
-    optionRow.innerHTML += `<tr>
+  if (optionvalues.length === 0) {
+    optionTable.innerHTML = " ";
+  } else {
+    optionvalues.forEach((optionVal) => {
+      //lägga in värden i tabellen
+      optionRow.innerHTML += `<tr>
     <td>
       <div class="custom-control custom-checkbox">
        <input type="checkbox" class="custom-control-input checkbox" id="${optionVal.id}">
@@ -79,7 +86,8 @@ const addOptionRow = function () {
         <td>${optionVal.price}</td>
         <td>${optionVal.total}</td>
     </tr>`;
-  });
+    });
+  }
 };
 
 addOptionRow();
@@ -144,3 +152,15 @@ denyBtn.addEventListener("click", function () {
   </div>
   `;
 });
+
+// offert gilltig till
+
+let dateToday = new Date();
+let lastDate = new Date(2022, 01, 20);
+console.log(lastDate);
+
+let differenceTime = lastDate.getTime() - dateToday.getTime();
+let differenceDays = differenceTime / (1000 * 3600 * 24);
+console.log(differenceDays);
+
+offertDate.innerHTML = `Offert giltig till<div class="h6">20-01-2022 (5 dagar kvar)</div>`;

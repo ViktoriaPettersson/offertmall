@@ -43,9 +43,21 @@ p {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.img-box {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  border-radius: 2rem;
+}
 .about_img {
-  /* border-radius: 2rem; */
+  border-radius: 2rem;
   max-height: 25rem;
+  transition: transform 0.3s;
+}
+.about_img:hover {
+  border-radius: 2rem;
+  transform: scale(1.15);
+  transition: transform 0.3s;
 }
 .btn_global {
   border: none;

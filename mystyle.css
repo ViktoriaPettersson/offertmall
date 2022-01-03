@@ -51,7 +51,7 @@ p {
 }
 .about_img {
   border-radius: 2rem;
-  max-height: 25rem;
+  max-width: 100%;
   transition: transform 0.3s;
 }
 .about_img:hover {

@@ -12,8 +12,12 @@ const denyBtn = document.querySelector(".denyBtn");
 const optionTable = document.querySelector(".option-table");
 // giltig till
 const offertDate = document.querySelector(".offert-date");
-
-// Hämta totala priset
+// utan moms
+const sumWithoutTax = document.querySelector(".sumWithoutTax");
+//moms
+const sumTax = document.querySelector(".sumTax");
+//total price
+const sumWithTax = document.querySelector(".sumWithTax");
 
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 const priceValues = [
@@ -47,11 +51,14 @@ let optionvalues = [
     total: 2000,
   },
 ];
+// puschar upp totala priset i en ny array
+const totalPrice = [];
 
 // lägga in värden i pristabellen
 const addTableRow = function () {
   // loopa igenom priceValue och lägga in värden i pristabellen
   priceRow.innerHTML = " ";
+
   priceValues.forEach((priceVal) => {
     //lägga in värden i tabellen
     // priceRow.innerHTML = " ";
@@ -157,10 +164,13 @@ denyBtn.addEventListener("click", function () {
 
 let dateToday = new Date();
 let lastDate = new Date(2022, 01, 20);
-console.log(lastDate);
+// console.log(lastDate);
 
 let differenceTime = lastDate.getTime() - dateToday.getTime();
+lastDate = lastDate.toLocaleDateString("sv-se");
 let differenceDays = differenceTime / (1000 * 3600 * 24);
-console.log(differenceDays);
+differenceDays = Math.floor(differenceDays);
+// console.log(differenceDays);
+offertDate.innerHTML = `Offert giltig till<div class="h6">${lastDate}(${differenceDays} dagar)</div>`;
 
-offertDate.innerHTML = `Offert giltig till<div class="h6">20-01-2022 (5 dagar kvar)</div>`;
+// Räkna ut pris utan moms,moms och med moms

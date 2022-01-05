@@ -1,0 +1,31 @@
+.header {
+}
+.img_box {
+  border-bottom-left-radius: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));
+}
+.img_header {
+  border-bottom-left-radius: 100%;
+  max-width: 100%;
+}
+.img_box .img_header {
+  mix-blend-mode: overlay;
+}
+.header_info {
+  margin: auto;
+}
+.header_info_box {
+  max-width: 40rem;
+  margin: auto;
+}
+.offert_info {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  right: 0;
+  top: 0;
+}
+.box_rel {
+  position: relative;
+}

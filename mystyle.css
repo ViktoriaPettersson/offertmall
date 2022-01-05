@@ -1,10 +1,12 @@
 h1 {
   font-family: "Playfair Display", serif !important;
   font-size: 5rem;
+  color: #38342f;
 }
 h2 {
   font-family: "Playfair Display", serif !important;
   font-size: 3rem;
+  color: #38342f;
 }
 h3,
 h4,
@@ -16,12 +18,12 @@ p {
 .option-font {
   font-family: "Waterfall", cursive;
   font-size: 4rem;
-  color: #c0894b;
+  color: #38342f;
 }
 .tussock {
   background-color: #c0894b;
 }
-.jumbo {
+/* .jumbo {
   background-image: url("./images/img5.jpg"),
     linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));
   background-repeat: no-repeat;
@@ -36,12 +38,50 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+} */
+.header {
+  height: auto;
+  background-color: #c0894b27;
+  position: relative;
 }
+.img_box {
+  border-bottom-left-radius: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.img_header {
+  border-bottom-left-radius: 100%;
+  max-width: 100%;
+}
+.img_box .img_header {
+  mix-blend-mode: overlay;
+}
+.header_info {
+  margin: auto;
+}
+.header_info_box {
+  max-width: 40rem;
+  margin: auto;
+}
+.offert_info {
+  position: absolute;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  right: 0;
+  top: 0;
+}
+.box_rel {
+  position: relative;
+}
+
 .global_border {
   border-top: 2px solid #c0894b;
   border-bottom: 2px solid #c0894b;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.global_border_bottom {
+  border-bottom: 1px solid #c0894b;
+  padding-bottom: 0.5rem;
 }
 .img-box {
   position: relative;
@@ -185,7 +225,7 @@ p {
   top: 48px;
   bottom: -2rem;
   margin-left: -1px;
-  border-left: 2px solid #00000033;
+  border-left: 2px dashed #00000033;
 }
 
 .step .step-element:last-child .step-number::before {
@@ -198,5 +238,8 @@ p {
   }
   h2 {
     font-size: 2.5rem;
+  }
+  .offert_info_text {
+    font-size: 0.8rem;
   }
 }

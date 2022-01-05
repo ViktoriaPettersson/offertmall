@@ -51,8 +51,22 @@ let optionvalues = [
     total: 2000,
   },
 ];
-// puschar upp totala priset i en ny array
-const totalPrice = [];
+
+// räkna ut totalpriset
+const calcSum = function () {
+  let arr = [];
+  let total = priceValues.map((v) => {
+    arr.push(v.total);
+  });
+  console.log(arr);
+  const sum = arr.reduce((cur, val) => cur + val);
+
+  // Skriva ut totalpriset
+  sumWithTax.innerHTML = `${sum} SEK`;
+  sumTax.innerHTML = `${sum * 0.2} SEK`;
+  sumWithoutTax.innerHTML = `${sum * 0.8} SEK`;
+};
+calcSum();
 
 // lägga in värden i pristabellen
 const addTableRow = function () {
@@ -117,6 +131,7 @@ optionRow.addEventListener("click", function (e) {
 addBtn.addEventListener("click", function () {
   addTableRow();
   addOptionRow();
+  calcSum();
 });
 
 const addOption = function (check, cb_id) {
@@ -171,6 +186,6 @@ lastDate = lastDate.toLocaleDateString("sv-se");
 let differenceDays = differenceTime / (1000 * 3600 * 24);
 differenceDays = Math.floor(differenceDays);
 // console.log(differenceDays);
-offertDate.innerHTML = `Offert giltig till<div class="h6">${lastDate}(${differenceDays} dagar)</div>`;
+offertDate.innerHTML = `Offert giltig till<div class="small">${lastDate}(${differenceDays} dagar)</div>`;
 
 // Räkna ut pris utan moms,moms och med moms

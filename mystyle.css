@@ -20,6 +20,10 @@ p {
   font-size: 4rem;
   color: #38342f;
 }
+.offert_info_heading {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
 .tussock {
   background-color: #c0894b;
 }
@@ -158,6 +162,7 @@ p {
 }
 .bg_price {
   background-color: #cfd2d22c;
+  /* background-color: #c0894b27; */
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #c0894b !important;
@@ -244,5 +249,5 @@ p {
     font-size: 0.8rem;
   }
 }
-@media (hover: none) {
+@media screen and (max-width: 768px) {
 }

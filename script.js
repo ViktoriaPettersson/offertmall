@@ -22,13 +22,13 @@ const sumWithTax = document.querySelector(".sumWithTax");
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 const priceValues = [
   {
-    desc: "test",
+    desc: "arbetsmoment1",
     quantity: 0,
     price: 1000,
     total: 1000,
   },
   {
-    desc: "test2",
+    desc: "arbetsmoment2",
     quantity: 1,
     price: 2000,
     total: 2000,
@@ -186,6 +186,6 @@ lastDate = lastDate.toLocaleDateString("sv-se");
 let differenceDays = differenceTime / (1000 * 3600 * 24);
 differenceDays = Math.floor(differenceDays);
 // console.log(differenceDays);
-offertDate.innerHTML = `Offert giltig till<div class="small">${lastDate}(${differenceDays} dagar)</div>`;
+offertDate.innerHTML = `<span class="offert_info_heading">Offert giltig till</span><div class="small">${lastDate}(${differenceDays} dagar)</div>`;
 
 // Räkna ut pris utan moms,moms och med moms

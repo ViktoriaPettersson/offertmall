@@ -20,16 +20,16 @@ const sumTax = document.querySelector(".sumTax");
 const sumWithTax = document.querySelector(".sumWithTax");
 
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
-const priceValues = [
+let priceValues = [
   {
     desc: "arbetsmoment1",
-    quantity: 0,
+    quantity: 2,
     price: 1000,
     total: 1000,
   },
   {
     desc: "arbetsmoment2",
-    quantity: 1,
+    quantity: 4,
     price: 2000,
     total: 2000,
   },
@@ -39,14 +39,14 @@ let optionvalues = [
   {
     id: 0,
     desc: "option1",
-    quantity: 1,
+    quantity: 2,
     price: 1000,
     total: 1000,
   },
   {
     id: 1,
     desc: "option2",
-    quantity: 2,
+    quantity: 4,
     price: 2000,
     total: 2000,
   },
@@ -58,7 +58,7 @@ const calcSum = function () {
   let total = priceValues.map((v) => {
     arr.push(v.total);
   });
-  console.log(arr);
+  // console.log(arr);
   const sum = arr.reduce((cur, val) => cur + val);
 
   // Skriva ut totalpriset
@@ -68,6 +68,7 @@ const calcSum = function () {
 };
 calcSum();
 
+
 // lägga in värden i pristabellen
 const addTableRow = function () {
   // loopa igenom priceValue och lägga in värden i pristabellen
@@ -75,13 +76,31 @@ const addTableRow = function () {
 
   priceValues.forEach((priceVal) => {
     //lägga in värden i tabellen
-    // priceRow.innerHTML = " ";
-    priceRow.innerHTML += `<tr>
+
+    if(priceVal.id >= 0) {
+       priceRow.innerHTML += `<tr>
       <th scope="row">${priceVal.desc}</th>
           <td>${priceVal.quantity}</td>
           <td>${priceVal.price}</td>
           <td>${priceVal.total}</td>
+          <td>
+         
+          <button class="btn_table" name="btnDel" id="${priceVal.id}">Ångra</button>
+        
+          </td>
       </tr>`;
+    }
+    else {
+      priceRow.innerHTML += `<tr>
+      <th scope="row">${priceVal.desc}</th>
+          <td>${priceVal.quantity}</td>
+          <td>${priceVal.price}</td>
+          <td>${priceVal.total}</td>
+        
+          <td></td>
+          
+      </tr>`;
+    }
   });
 };
 
@@ -90,9 +109,7 @@ addTableRow();
 //lägg in värden i valbara alternativ -tabellen
 const addOptionRow = function () {
   optionRow.innerHTML = " ";
-  if (optionvalues.length === 0) {
-    optionTable.innerHTML = " ";
-  } else {
+ 
     optionvalues.forEach((optionVal) => {
       //lägga in värden i tabellen
       optionRow.innerHTML += `<tr>
@@ -109,11 +126,28 @@ const addOptionRow = function () {
     </tr>`;
     });
   }
-};
+
+priceRow.addEventListener('click', function(e) {
+  if(e.target.name == "btnDel") {
+    remOption(e)
+  }
+})
+const remOption = function(e) {
+  priceValues.forEach(val => {
+    if(val.id == e.target.id)
+    //Lägger till option-värder i optionarray
+    optionvalues.push(val)
+    //filtrerar prislistan tar bort option som är ångrade
+    priceValues = priceValues.filter(val => val.id != e.target.id )
+    addOptionRow()
+  })
+  addTableRow()
+}
 
 addOptionRow();
 
 const checkbox = optionRow.querySelectorAll(".checkbox");
+// console.log(checkbox)
 
 optionRow.addEventListener("click", function (e) {
   // console.log(e.target.checked, e.target.id);
@@ -132,7 +166,12 @@ addBtn.addEventListener("click", function () {
   addTableRow();
   addOptionRow();
   calcSum();
+  // console.log(priceValues)
+
+  // delBtn()
+
 });
+
 
 const addOption = function (check, cb_id) {
   // console.log(check, cb_id);
@@ -155,11 +194,16 @@ const optionInnerText = document.querySelector(".option-innerText");
 acceptBtn.addEventListener("click", function () {
   optionInnerText.innerHTML = `
   <div class="w-75">
-  <h4>Offert Godkänd</h4>
+  <h4 class="mb-4">Offert Godkänd</h4>
   <div>Suscipit aperiam magnam reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatur
-  tenetur quos, quibusdam,
+  tenetur quos, quibusdam.
   suscipit debitis.</div>
-  <div class="option-font">Viktoria. P</div>
+  <div class="mt-3">
+      <h5>Kontakt</h5>
+      <div>073 123 45 67</div> 
+      <div>company@mail.com</div> 
+  </div>
+  <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
   </div>
   `;
 });
@@ -168,9 +212,14 @@ acceptBtn.addEventListener("click", function () {
 denyBtn.addEventListener("click", function () {
   optionInnerText.innerHTML = `
   <div class="w-75">
-  <h4>Offert Nekad</h4>
-  <div>Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatar.</div>
-  <div class="option-font">Viktoria. P</div>
+  <h4 class="mb-4">Offert Nekad</h4>
+  <div>Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatar. Rerum, minus unde recusandae rem dicta deserunt.</div>
+  <div class="mt-3">
+      <h5>Kontakt</h5>
+      <div>073 123 45 67</div> 
+      <div>company@mail.com</div> 
+  </div>
+  <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
   </div>
   `;
 });
@@ -186,6 +235,6 @@ lastDate = lastDate.toLocaleDateString("sv-se");
 let differenceDays = differenceTime / (1000 * 3600 * 24);
 differenceDays = Math.floor(differenceDays);
 // console.log(differenceDays);
-offertDate.innerHTML = `<span class="offert_info_heading">Offert giltig till</span><div class="small">${lastDate}(${differenceDays} dagar)</div>`;
+offertDate.innerHTML = `<span class="offert_info_heading">Offert giltig till</span><div class="">${lastDate}(${differenceDays} dagar)</div>`;
 
 // Räkna ut pris utan moms,moms och med moms

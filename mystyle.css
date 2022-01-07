@@ -1,6 +1,6 @@
 h1 {
   font-family: "Playfair Display", serif !important;
-  font-size: 5rem;
+  font-size: 6rem;
   color: #38342f;
 }
 h2 {
@@ -15,14 +15,14 @@ h6,
 p {
   font-family: "Poppins", sans-serif !important;
 }
-.option-font {
+/* .option-font {
   font-family: "Waterfall", cursive;
   font-size: 4rem;
   color: #38342f;
-}
+} */
 .offert_info_heading {
   font-family: "Playfair Display", serif;
-  font-style: italic;
+  font-size: 1.5rem;
 }
 .tussock {
   background-color: #c0894b;
@@ -46,7 +46,7 @@ p {
 .header {
   height: auto;
   background-color: #c0894b27;
-  position: relative;
+  /* position: relative; */
   z-index: -1;
 }
 .img_box {
@@ -68,9 +68,9 @@ p {
   margin: auto;
 }
 .offert_info {
-  background-color: #ffffff79;
+  background-color: #ffffffc4;
   position: absolute;
-  padding: 1.5rem;
+  padding: 2rem;
   right: 2%;
   top: 2%;
 }
@@ -85,7 +85,8 @@ p {
   padding-bottom: 1rem;
 }
 .global_border_bottom {
-  border-bottom: 1px solid #c0894b;
+  display: inline-block;
+  border-bottom: 2px solid #c0894b;
   padding-bottom: 0.5rem;
 }
 .img-box {
@@ -137,10 +138,21 @@ p {
   transform: scale(1.15);
   transition: transform 0.3s;
 }
+.btn_table {
+  border: 1px solid #c0894b;
+  border-radius: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #363030;
+  background-color: #ffffff;
+  outline: none !important;
+
+}
 .check_icon {
   font-size: 1.5rem;
 }
-
 .img_fullsize {
   padding-top: 10%;
   padding-bottom: 10%;
@@ -247,6 +259,9 @@ p {
   }
   .offert_info_text {
     font-size: 0.8rem;
+  }
+  .offert_info_heading {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {

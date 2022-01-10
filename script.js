@@ -18,6 +18,10 @@ const sumWithoutTax = document.querySelector(".sumWithoutTax");
 const sumTax = document.querySelector(".sumTax");
 //total price
 const sumWithTax = document.querySelector(".sumWithTax");
+//scroll_btn
+const btnScroll = document.querySelector(".btn_scroll")
+//prisförslag
+const priceSection = document.querySelector("#price-section")
 
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 let priceValues = [
@@ -32,6 +36,12 @@ let priceValues = [
     quantity: 4,
     price: 2000,
     total: 2000,
+  },
+  {
+    desc: "arbetsmoment3",
+    quantity: 5,
+    price: 3000,
+    total: 3000,
   },
 ];
 // En array med object av värden som ligger i valbara alternativ
@@ -52,6 +62,11 @@ let optionvalues = [
   },
 ];
 
+// Scroll ner till prisförslaget
+btnScroll.addEventListener('click', function(e) {
+priceSection.scrollIntoView({behavior: "smooth"})
+})
+
 // räkna ut totalpriset
 const calcSum = function () {
   let arr = [];
@@ -68,7 +83,6 @@ const calcSum = function () {
 };
 calcSum();
 
-
 // lägga in värden i pristabellen
 const addTableRow = function () {
   // loopa igenom priceValue och lägga in värden i pristabellen
@@ -84,9 +98,7 @@ const addTableRow = function () {
           <td>${priceVal.price}</td>
           <td>${priceVal.total}</td>
           <td>
-         
-          <button class="btn_table" name="btnDel" id="${priceVal.id}">Ångra</button>
-        
+          <button class="far fa-times-circle table-trash" name="btnDel" id="${priceVal.id}"></button>
           </td>
       </tr>`;
     }
@@ -96,9 +108,7 @@ const addTableRow = function () {
           <td>${priceVal.quantity}</td>
           <td>${priceVal.price}</td>
           <td>${priceVal.total}</td>
-        
           <td></td>
-          
       </tr>`;
     }
   });
@@ -109,7 +119,6 @@ addTableRow();
 //lägg in värden i valbara alternativ -tabellen
 const addOptionRow = function () {
   optionRow.innerHTML = " ";
- 
     optionvalues.forEach((optionVal) => {
       //lägga in värden i tabellen
       optionRow.innerHTML += `<tr>
@@ -140,6 +149,7 @@ const remOption = function(e) {
     //filtrerar prislistan tar bort option som är ångrade
     priceValues = priceValues.filter(val => val.id != e.target.id )
     addOptionRow()
+    calcSum()
   })
   addTableRow()
 }
@@ -166,13 +176,7 @@ addBtn.addEventListener("click", function () {
   addTableRow();
   addOptionRow();
   calcSum();
-  // console.log(priceValues)
-
-  // delBtn()
-
 });
-
-
 const addOption = function (check, cb_id) {
   // console.log(check, cb_id);
   optionvalues.forEach((val) => {
@@ -194,7 +198,8 @@ const optionInnerText = document.querySelector(".option-innerText");
 acceptBtn.addEventListener("click", function () {
   optionInnerText.innerHTML = `
   <div class="w-75">
-  <h4 class="mb-4">Offert Godkänd</h4>
+  <h4>Offert Godkänd</h4>
+  <div class="small mb-4">Godkändes ${dateToday}</div>
   <div>Suscipit aperiam magnam reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatur
   tenetur quos, quibusdam.
   suscipit debitis.</div>
@@ -212,7 +217,8 @@ acceptBtn.addEventListener("click", function () {
 denyBtn.addEventListener("click", function () {
   optionInnerText.innerHTML = `
   <div class="w-75">
-  <h4 class="mb-4">Offert Nekad</h4>
+  <h4>Offert Nekad</h4>
+  <div class="small mb-4">Nekades ${dateToday}</div>
   <div>Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatar. Rerum, minus unde recusandae rem dicta deserunt.</div>
   <div class="mt-3">
       <h5>Kontakt</h5>
@@ -232,6 +238,7 @@ let lastDate = new Date(2022, 01, 20);
 
 let differenceTime = lastDate.getTime() - dateToday.getTime();
 lastDate = lastDate.toLocaleDateString("sv-se");
+dateToday = dateToday.toDateString("sv-se")
 let differenceDays = differenceTime / (1000 * 3600 * 24);
 differenceDays = Math.floor(differenceDays);
 // console.log(differenceDays);

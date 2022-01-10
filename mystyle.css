@@ -15,11 +15,6 @@ h6,
 p {
   font-family: "Poppins", sans-serif !important;
 }
-/* .option-font {
-  font-family: "Waterfall", cursive;
-  font-size: 4rem;
-  color: #38342f;
-} */
 .offert_info_heading {
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
@@ -27,57 +22,38 @@ p {
 .tussock {
   background-color: #c0894b;
 }
-/* .jumbo {
-  background-image: url("./images/img5.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  height: 40rem;
-  position: relative;
-}
-.header_box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 .header {
   height: auto;
   background-color: #c0894b27;
   /* position: relative; */
   z-index: -1;
 }
-.img_box {
-  /* border-bottom-left-radius: 100%; */
-  /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
-}
 .img_header {
   border-bottom-left-radius: 100%;
   max-width: 100%;
 }
-/* .img_box .img_header {
-  mix-blend-mode: overlay;
-} */
 .header_info {
   margin: auto;
 }
 .header_info_box {
-  max-width: 40rem;
+  max-width: 55rem;
   margin: auto;
+  /* margin-left: 20%; */
+}
+.subtext-header {
+  font-size: 1.3rem;
+  font-weight: lighter;
 }
 .offert_info {
   background-color: #ffffffc4;
   position: absolute;
   padding: 2rem;
-  right: 2%;
-  top: 2%;
+  right: 0;
+  top: 0;
 }
 .box_rel {
   position: relative;
 }
-
 .global_border {
   border-top: 2px solid #c0894b;
   border-bottom: 2px solid #c0894b;
@@ -95,12 +71,12 @@ p {
   width: auto;
   border-radius: 2rem;
 }
-.about_img {
+.zoom_img {
   border-radius: 2rem;
   max-width: 100%;
   transition: transform 0.3s;
 }
-.about_img:hover {
+.zoom_img:hover {
   border-radius: 2rem;
   transform: scale(1.15);
   transition: transform 0.3s;
@@ -122,7 +98,6 @@ p {
   transition: transform 0.3s;
 }
 .btn_global_outline {
-  /* border: none; */
   padding: 1rem;
   border-radius: 2rem;
   border: 2px solid #c0894b;
@@ -130,7 +105,6 @@ p {
   color: #c0894b;
   font-weight: 700;
   background-color: #ffffff;
-  /* border: none !important; */
   outline: none !important;
   transition: transform 0.3s;
 }
@@ -148,7 +122,13 @@ p {
   color: #363030;
   background-color: #ffffff;
   outline: none !important;
-
+}
+.table-trash {
+  outline: none !important;
+  border: none !important;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+  color: #c0894b;
 }
 .check_icon {
   font-size: 1.5rem;
@@ -157,7 +137,7 @@ p {
   padding-top: 10%;
   padding-bottom: 10%;
   background-image: url("./images/img3.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.603));
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
@@ -174,7 +154,6 @@ p {
 }
 .bg_price {
   background-color: #cfd2d22c;
-  /* background-color: #c0894b27; */
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #c0894b !important;
@@ -264,5 +243,9 @@ p {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1440px) {
+  h1 {
+    font-size: 4rem;
+  }
 }

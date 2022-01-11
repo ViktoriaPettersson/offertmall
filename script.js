@@ -23,6 +23,8 @@ const btnScroll = document.querySelector(".btn_scroll")
 //prisförslag
 const priceSection = document.querySelector("#price-section")
 
+const nextStepBtns = document.querySelector(".next_step_btns")
+
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 let priceValues = [
   {
@@ -60,6 +62,13 @@ let optionvalues = [
     price: 2000,
     total: 2000,
   },
+  {
+    id: 2,
+    desc: "option3",
+    quantity: 4,
+    price: 2000,
+    total: 2000,
+  }
 ];
 
 // Scroll ner till prisförslaget
@@ -211,6 +220,7 @@ acceptBtn.addEventListener("click", function () {
   <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
   </div>
   `;
+  nextStepBtns.innerHTML = " "
 });
 
 // Deny knapp
@@ -228,6 +238,8 @@ denyBtn.addEventListener("click", function () {
   <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
   </div>
   `;
+  nextStepBtns.innerHTML = " "
+
 });
 
 // offert gilltig till

@@ -55,6 +55,57 @@
   </head>
 
   <body>
+
+       <!-- The Modal -->
+       <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div>
+              <h2 class="text-center mb-2">Kontakta oss</h2>
+              <div class="text-center mx-auto w-75">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut non nemo nesciunt architecto eius vero sequi soluta delectus, ut officia?</div>
+              <div class="text-center mb-5">
+              <img class="mt-4" src="./images/logoipsum-logo-6.svg">
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" id="form34" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form34">Namn</label>
+                </div>
+        
+                <div class="md-form mb-5">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="email" id="form29" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form29">Email</label>
+                </div>
+        
+                <div class="md-form mb-5">
+                  <i class="fas fa-tag prefix grey-text"></i>
+                  <input type="text" id="form32" class="form-control validate">
+                  <label data-error="wrong" data-success="right" for="form32">Ämne</label>
+                </div>
+        
+                <div class="md-form">
+                  <i class="fas fa-pencil prefix grey-text"></i>
+                  <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+                  <label data-error="wrong" data-success="right" for="form8">Ditt meddelande</label>
+                </div>
+        
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button class="sendMessage btn_global mb-4">Skicka</button>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      
+
     <div class="position-relative">
       <div class="position-absolute ml-2 mt-2">
         <img src="./images/logoipsum-logo-6.svg" />
@@ -64,14 +115,15 @@
       class="d-flex flex-column-reverse flex-lg-row justify-content-between header"
     >
       <div class="header_info col-sm-12 col-md-6">
-        <div class="header_info_box">
+        <div class="header_info_box text-center">
           <h1 class="mb-5 mt-5 wow fadeInDown" data-wow-delay="0.2s">
             Offertmall
           </h1>
           <div class="wow fadeIn subtext-header" data-wow-delay="0.2s">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio fugiat mollitia similique veritatis laborum, accusantium assumenda architecto nam a suscipit voluptatibus, odit deleniti libero.
           </div>
-          <button class="btn_global mt-5 mb-5 btn_scroll">Prisförslag</button>
+          <button class="btn_global mt-5 btn_scroll mx-2">Prisförslag</button>
+          <button id="messageBtn" class="btn_global_outline_header mt-2 mb-5 btn_scroll mx-2">Meddelande</button>
         </div>
       </div>
       <div class="">
@@ -333,10 +385,10 @@
     <!--Nästa steg -->
     <!--Team-->
     
-    <div class="container mt-lg-5 pt-5">
+    <div class="container mt-lg-5 pt-5 pb-0 pb-md-5">
       <div class="d-flex justify-content-center align-items-center mb-5">
         <h2
-          class="mb-0 mb-md-4 global_border wow fadeInDown"
+          class="mb-0 mb-md-4 mt-0 mt-md-5 global_border wow fadeInDown"
           data-wow-delay="0.2s"
         >
           Nästa steg
@@ -350,12 +402,43 @@
         hic cum culpa non quas voluptatum eveniet deleniti adipisci alias. Lorem
         ipsum dolor sit amet consectetur adipisicing elit. Corporis, id!
       </p>
+
+      <!--Agree to terms and conditions-->
+      <div class="form-group text-center mt-5">
+        <div class="form-check pl-0">
+          <input class="form-check-input agreeTerms" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+
       <div
         class="d-flex justify-content-center mt-5 pb-5 text-center option-innerText"
       ></div>
       <div class="mb-5 pb-5 d-flex justify-content-center next_step_btns">
         <button class="btn_global_outline mr-2 denyBtn">Neka</button>
         <button class="btn_global ml-2 acceptBtn">Godkänn</button>
+      </div>
+    </div>
+    <!--Kontakt, skriv ut-->
+    <div class="contact py-5 text-white">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-top align-items-md-center mt-2 mt-md-5">
+        <div class="">
+           <h4 class="font-weight-bold">Kontakta oss</h4>
+           <div class="mb-4 contact_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed illum ab magnam, esse architecto placeat velit nulla accusamus. Modi, animi? Veniam debitis sequi similique commodi ut beatae molestias culpa officiis!</div>
+           <div class="mb-2"><i class="fas fa-phone contact_icon"></i><span class="font-weight-light ml-2">+46 070 012 34 56</span></div>
+           <div class="mb-2"><i class="fas fa-envelope contact_icon"></i><span class="font-weight-light ml-2">company@mail.com</span></div>
+           <div class="mb-2"><i class="fas fa-print contact_icon"></i><span class="font-weight-light ml-2">Skriv ut</span></div>
+
+        </div>
+        <div>
+           <img src="./images/logoipsum-logo-6.svg" class="logo mt-5 mt-md-0"/>
+        </div>
+       
       </div>
     </div>
 

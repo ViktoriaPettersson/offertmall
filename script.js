@@ -24,6 +24,17 @@ const btnScroll = document.querySelector(".btn_scroll")
 const priceSection = document.querySelector("#price-section")
 
 const nextStepBtns = document.querySelector(".next_step_btns")
+// Get the modal
+const modal = document.getElementById("myModal");
+// Get the button that opens the modal
+const messageBtn = document.getElementById("messageBtn");
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+//skicka meddelande
+const sendBtn = document.querySelector(".sendMessage")
+// agree terms btn
+const agreeTermsBtn = document.querySelector(".agreeTerms")
+
 
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 let priceValues = [
@@ -71,9 +82,35 @@ let optionvalues = [
   }
 ];
 
+//Modal Window
+
+// When the user clicks on the button, open the modal
+messageBtn.addEventListener('click', function() {
+    modal.style.display = "block";
+
+}) 
+
+// When the user clicks on <span> (x), close the modal
+span.addEventListener('click', function() {
+  modal.style.display = "none";
+
+})
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', function(event) { 
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+})
+
 // Scroll ner till prisförslaget
 btnScroll.addEventListener('click', function(e) {
 priceSection.scrollIntoView({behavior: "smooth"})
+})
+
+// Send message. Laddar om sidan 
+sendBtn.addEventListener('click', function() {
+  location.reload();
 })
 
 // räkna ut totalpriset
@@ -107,7 +144,7 @@ const addTableRow = function () {
           <td>${priceVal.price}</td>
           <td>${priceVal.total}</td>
           <td>
-          <button class="far fa-times-circle table-trash" name="btnDel" id="${priceVal.id}"></button>
+          <button class="fas fa-times-circle table-trash" name="btnDel" id="${priceVal.id}"></button>
           </td>
       </tr>`;
     }
@@ -132,7 +169,7 @@ const addOptionRow = function () {
       //lägga in värden i tabellen
       optionRow.innerHTML += `<tr>
     <td>
-      <div class="custom-control custom-checkbox">
+      <div class="custom-control custom-checkbox checkbox-lg">
        <input type="checkbox" class="custom-control-input checkbox" id="${optionVal.id}">
        <label class="custom-control-label" for="${optionVal.id}"></label>
       </div>

@@ -23,18 +23,27 @@ const btnScroll = document.querySelector(".btn_scroll")
 //prisförslag
 const priceSection = document.querySelector("#price-section")
 
-const nextStepBtns = document.querySelector(".next_step_btns")
+const nextStep = document.querySelector(".nextStep")
 // Get the modal
 const modal = document.getElementById("myModal");
 // Get the button that opens the modal
 const messageBtn = document.getElementById("messageBtn");
 // Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
+const closeForm = document.getElementsByClassName("close")[0];
 //skicka meddelande
 const sendBtn = document.querySelector(".sendMessage")
 // agree terms btn
 const agreeTermsBtn = document.querySelector(".agreeTerms")
+//feedback
+const invalidFeedback = document.querySelector(".invalid_feedback")
 
+
+//Form inputs
+const modalForm = document.querySelector(".modalForm")
+const nameInput = document.querySelector(".nameInput")
+const emailInput = document.querySelector(".emailInput")
+const subjectInput = document.querySelector(".subjectInput")
+const messageInput = document.querySelector(".messageInput")
 
 // Skapa en array med objekt av värden som ska läggas till i pristabellen
 let priceValues = [
@@ -81,37 +90,30 @@ let optionvalues = [
     total: 2000,
   }
 ];
-
 //Modal Window
-
 // When the user clicks on the button, open the modal
 messageBtn.addEventListener('click', function() {
     modal.style.display = "block";
-
 }) 
 
 // When the user clicks on <span> (x), close the modal
-span.addEventListener('click', function() {
+closeForm.addEventListener('click', function() {
   modal.style.display = "none";
-
 })
-
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event) { 
     if (event.target == modal) {
     modal.style.display = "none";
     }
 })
-
 // Scroll ner till prisförslaget
 btnScroll.addEventListener('click', function(e) {
 priceSection.scrollIntoView({behavior: "smooth"})
 })
-
 // Send message. Laddar om sidan 
-sendBtn.addEventListener('click', function() {
-  location.reload();
+modalForm.addEventListener('submit', function() {
 })
+//Validera formlär
 
 // räkna ut totalpriset
 const calcSum = function () {
@@ -242,32 +244,54 @@ const optionInnerText = document.querySelector(".option-innerText");
 
 // Accept knapp
 acceptBtn.addEventListener("click", function () {
-  optionInnerText.innerHTML = `
-  <div class="w-75">
-  <h4>Offert Godkänd</h4>
-  <div class="small mb-4">Godkändes ${dateToday}</div>
-  <div>Suscipit aperiam magnam reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatur
-  tenetur quos, quibusdam.
-  suscipit debitis.</div>
-  <div class="mt-3">
-      <h5>Kontakt</h5>
-      <div>073 123 45 67</div> 
-      <div>company@mail.com</div> 
-  </div>
-  <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
-  </div>
-  `;
-  nextStepBtns.innerHTML = " "
+
+  if(!agreeTermsBtn.checked) {
+    
+  invalidFeedback.innerHTML = `<div class="text-center">Please accept Terms and Conditions to continue</div>`
+  }
+  
+  else{
+  nextStep.innerHTML = " "
+   optionInnerText.innerHTML = `
+    <div class="">
+    <h4>Offert Godkänd</h4>
+    <div class="small mb-4">Godkändes ${dateToday}</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aspernatur
+    vitae adipisci praesentium recusandae suscipit aperiam magnam
+    reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo
+    incidunt accusamus fugit, sint dignissimos vero! Voluptate doloremque
+    hic cum culpa non quas voluptatum eveniet deleniti adipisci alias.
+    suscipit debitis.</div>
+    <div class="mt-4">
+        <h5>Kontakt</h5>
+        <div>073 123 45 67</div> 
+        <div>company@mail.com</div> 
+    </div>
+    <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
+    </div>
+    `;
+  
+  }
 });
 
 // Deny knapp
 denyBtn.addEventListener("click", function () {
+
+  if(!agreeTermsBtn.checked) {
+    invalidFeedback.innerHTML = `<div class="text-center">Please accept Terms and Conditions to continue</div>`
+  }
+  else{
+  nextStep.innerHTML = " "
   optionInnerText.innerHTML = `
-  <div class="w-75">
+  <div class="">
   <h4>Offert Nekad</h4>
   <div class="small mb-4">Nekades ${dateToday}</div>
-  <div>Rerum, minus unde recusandae rem dicta deserunt, quo nemo incidunt perspiciatis aut odio est consequatar. Rerum, minus unde recusandae rem dicta deserunt.</div>
-  <div class="mt-3">
+  <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non aspernatur
+  vitae adipisci praesentium recusandae suscipit aperiam magnam
+  reprehenderit. Rerum, minus unde recusandae rem dicta deserunt, quo nemo
+  incidunt accusamus fugit, sint dignissimos vero! Voluptate doloremque
+  hic cum culpa non quas voluptatum eveniet deleniti adipisci alias.</div>
+  <div class="mt-4">
       <h5>Kontakt</h5>
       <div>073 123 45 67</div> 
       <div>company@mail.com</div> 
@@ -275,10 +299,9 @@ denyBtn.addEventListener("click", function () {
   <img src="./images/logoipsum-logo-6.svg" class="mt-3"/>
   </div>
   `;
-  nextStepBtns.innerHTML = " "
+  }
 
 });
-
 // offert gilltig till
 
 let dateToday = new Date();

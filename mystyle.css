@@ -15,6 +15,12 @@ h6,
 p {
   font-family: "Poppins", sans-serif !important;
 }
+.tussock {
+  background-color: #c0894b;
+}
+.tussock_text_light {
+  color: #ffd4a2;
+}
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -29,7 +35,6 @@ p {
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.692); /* Black w/ opacity */
 }
-
 /* Modal Content */
 .modal-content {
   position: relative;
@@ -44,18 +49,15 @@ p {
   animation-duration: 0.4s;
   border-radius: 1rem;
 }
-
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0} 
   to {top:0; opacity:1}
 }
-
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
 }
-
 /* The Close Button */
 .close {
   color: rgb(0, 0, 0);
@@ -64,7 +66,6 @@ p {
   left: 3%;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: rgba(0, 0, 0, 0.493);
@@ -78,34 +79,31 @@ p {
 .modal-footer {
   border: none !important;
 }
-
 .modal-header {
    border: none !important
 }
 .md-form label.active { 
   color: rgb(63, 63, 63) !important;  
 }
-
 .md-form .prefix.active { 
    color: #c0894b !important;
-  }
-  .form-control:focus {
-      /* background-color: red !important; */
-      border-bottom: 1px solid #c0894b !important;
-      outline: none !important;
-      box-shadow: none !important;
-      
-  }
+}
+.form-control:focus { 
+  border-bottom: 1px solid #3836347c !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.md-form.success input {
+  border-bottom: 1px solid green !important
+}
+.md-form.error input {
+  border-bottom: 1px solid red !important;
+}
 .offert_info_heading {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
 }
-.tussock {
-  background-color: #c0894b;
-}
-.tussock_text_light {
-  color: #ffd4a2;
-}
+
 .header {
   height: auto;
   background-color: #c0894b27;
@@ -130,6 +128,7 @@ p {
 }
 .offert_info {
   background-color: #ffffffc4;
+  border: 3px dotted #c0894b;
   position: absolute;
   padding: 2rem;
   right: 0;
@@ -160,11 +159,6 @@ p {
   max-width: 100%;
   transition: transform 0.3s;
 }
-.zoom_img:hover {
-  border-radius: 2rem;
-  transform: scale(1.15);
-  transition: transform 0.3s;
-}
 .btn_global {
   border: none;
   padding: 1rem;
@@ -175,10 +169,6 @@ p {
   border: none !important;
   outline: none !important;
   font-weight: 700;
-  transition: transform 0.3s;
-}
-.btn_global:hover {
-  transform: scale(1.15);
   transition: transform 0.3s;
 }
 .btn_global_outline {
@@ -192,10 +182,6 @@ p {
   outline: none !important;
   transition: transform 0.3s;
 }
-.btn_global_outline:hover {
-  transform: scale(1.15);
-  transition: transform 0.3s;
-}
 .btn_global_outline_header {
   padding: 1rem;
   border-radius: 2rem;
@@ -205,10 +191,6 @@ p {
   font-weight: 700;
   background-color: #c0894b00;
   outline: none !important;
-  transition: transform 0.3s;
-}
-.btn_global_outline_header:hover {
-  transform: scale(1.15);
   transition: transform 0.3s;
 }
 .btn_table {
@@ -229,7 +211,7 @@ p {
   font-size: 1.5rem;
   width: 1.35rem;
   height: 1.35rem;
-  color: #333333a1;
+  color: #c0894bd2;
 }
 .check_icon {
   font-size: 1.5rem;
@@ -263,26 +245,26 @@ p {
 }
 .custom-checkbox .custom-control-label::before {
   border-radius: 100%;
-  border-color: #333333a1 !important;
+  border-color: #c0894bd2 !important;
 }
 .custom-checkbox .custom-control-label::after {
   border-radius: 100%;
-  border-color: #333333a1 !important;
+  border-color: #c0894bd2 !important;
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #333333a1 !important;
+  background-color: #c0894bd2 !important;
   border: none !important;
 }
 .custom-checkbox
   .custom-control-input:checked:focus
   ~ .custom-control-label::before {
-  border-color: #333333a1!important;
-  outline-color: #333333a1 !important;
+  border-color: #c0894bd2!important;
+  outline-color: #c0894bd2 !important;
 }
 .custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
   box-shadow: none !important;
   /* border-color: #c0894b !important; */
-  border-color: #333333a1 !important;
+  border-color: #c0894bd2 !important;
 }
 .custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
   background-color: #ffffff;
@@ -347,7 +329,8 @@ p {
   background-color: #c0894b;
   border-radius: 100%;
   padding: 0.5rem;
-  color: #ffffff
+  color: #ffffff;
+  cursor: pointer;
 }
 .contact_text {
   max-width: 35rem;
@@ -368,9 +351,31 @@ p {
   .offert_info_heading {
     font-size: 1rem;
   }
+  .img_fullsize_text {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 1440px) {
   h1 {
     font-size: 4rem;
   }
+}
+@media (hover: hover) {
+  .btn_global_outline:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.btn_global_outline_header:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.btn_global:hover {
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
+.zoom_img:hover {
+  border-radius: 2rem;
+  transform: scale(1.15);
+  transition: transform 0.3s;
+}
 }

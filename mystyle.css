@@ -113,6 +113,7 @@ p {
 .img_header {
   border-bottom-left-radius: 100%;
   max-width: 100%;
+
 }
 .header_info {
   margin: auto;
@@ -138,14 +139,14 @@ p {
   position: relative;
 }
 .global_border {
-  border-top: 2px solid #c0894b;
-  border-bottom: 2px solid #c0894b;
+  border-top: 2px dotted #c0894b;
+  border-bottom: 2px dotted #c0894b;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 .global_border_bottom {
   display: inline-block;
-  border-bottom: 2px solid #c0894b;
+  border-bottom: 2px dotted #c0894b;
   padding-bottom: 0.5rem;
 }
 .img-box {
@@ -315,7 +316,7 @@ p {
   top: 48px;
   bottom: -2rem;
   margin-left: -1px;
-  border-left: 2px dashed #00000033;
+  border-left: 2px dotted #00000033;
 }
 
 .step .step-element:last-child .step-number::before {

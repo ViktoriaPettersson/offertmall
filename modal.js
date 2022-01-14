@@ -1,1 +1,0 @@
-https://daily-dev-tips.com/posts/fading-images-using-javascript/

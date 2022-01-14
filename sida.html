@@ -1,101 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
-    <!-- Bootstrap core CSS -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!-- Material Design Bootstrap -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mystyle.css" />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mystyle.css" />
 
-  <body>
+</head>
 
-    <div class="position-relative">
-      <div class="position-absolute ml-2 mt-1">
-        <img src="./images/logoipsum-logo-6.svg" />
+<body>
+
+  <div class="position-relative">
+    <div class="position-absolute ml-2 mt-1">
+      <img src="./images/logoipsum-logo-6.svg" />
+    </div>
+  </div>
+  <div class="d-flex flex-column-reverse flex-lg-row justify-content-between header">
+    <div class="header_info col-sm-12 col-md-6">
+      <div class="header_info_box text-center">
+        <h1 class="mb-5 mt-5 wow fadeInDown" data-wow-delay="0.2s">
+          Offertmall
+        </h1>
+        <div class="wow fadeIn subtext-header" data-wow-delay="0.2s">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio fugiat mollitia similique veritatis
+          laborum, accusantium assumenda architecto nam a suscipit voluptatibus, odit deleniti libero.
+        </div>
+        <button class="btn_global mt-5 btn_scroll mx-2">Prisförslag</button>
+        <button id="messageBtn" class="btn_global_outline_header mt-2 mb-5 btn_scroll mx-2">Meddelande</button>
       </div>
     </div>
-    <div class="d-flex flex-column-reverse flex-lg-row justify-content-between header">
-      <div class="header_info col-sm-12 col-md-6">
-        <div class="header_info_box text-center">
-          <h1 class="mb-5 mt-5 wow fadeInDown" data-wow-delay="0.2s">
-            Offertmall
-          </h1>
-          <div class="wow fadeIn subtext-header" data-wow-delay="0.2s">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio fugiat mollitia similique veritatis
-            laborum, accusantium assumenda architecto nam a suscipit voluptatibus, odit deleniti libero.
-          </div>
-          <button class="btn_global mt-5 btn_scroll mx-2">Prisförslag</button>
-          <button id="messageBtn" class="btn_global_outline_header mt-2 mb-5 btn_scroll mx-2">Meddelande</button>
+
+    <div class="">
+      <div class="box_rel">
+          <img src="./images/img4.jpg" class="img_header carousel_img"/>
+        <div class="offert_info mt-3 mr-3 text-center rounded-circle">
+          <h6 class="offert_info_text">
+            <span class="offert_info_heading">Offertnummer</span><br />
+            <div class="">123 ABC</div>
+          </h6>
+          <h6 class="offert_info_text">
+            <span class="offert_info_heading">Offert datum</span> <br />
+            <div class="">2022-01-01</div>
+          </h6>
+          <h6 class="offert-date offert_info_text"></h6>
         </div>
       </div>
-
-      <div class="">
-        <div class="box_rel">
-          <div class="img_box img_slider">
-            <img src="./images/img4.jpg" class="img_header" />
-          </div>
-          <div class="img_box img_slider">
-            <img src="./images/img5.jpg" class="img_header" />
-          </div>
-          <div class="offert_info mt-3 mr-3 text-center rounded-circle">
-            <h6 class="offert_info_text">
-              <span class="offert_info_heading">Offertnummer</span><br />
-              <div class="">123 ABC</div>
-            </h6>
-            <h6 class="offert_info_text">
-              <span class="offert_info_heading">Offert datum</span> <br />
-              <div class="">2022-01-01</div>
-            </h6>
-            <h6 class="offert-date offert_info_text"></h6>
-          </div>
-        </div>
-      </div>
-
     </div>
+  </div>
 
-    <!-- JQuery -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <!-- Bootstrap tooltips -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-    ></script>
-    <!-- Bootstrap core JavaScript -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
-    ></script>
-    <!-- MDB core JavaScript -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script>
-    <script type="text/javascript" src="/modal.js"></script>
-  </body>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+  <script type="text/javascript" src="/modal.js"></script>
+</body>
+
 </html>

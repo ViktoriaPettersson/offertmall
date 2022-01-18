@@ -14,50 +14,78 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mystyle.css" />
-
 </head>
 
 <body>
-
-  <div class="position-relative">
-    <div class="position-absolute ml-2 mt-1">
-      <img src="./images/logoipsum-logo-6.svg" />
-    </div>
-  </div>
-  <div class="d-flex flex-column-reverse flex-lg-row justify-content-between header">
-    <div class="header_info col-sm-12 col-md-6">
-      <div class="header_info_box text-center">
-        <h1 class="mb-5 mt-5 wow fadeInDown" data-wow-delay="0.2s">
-          Offertmall
-        </h1>
-        <div class="wow fadeIn subtext-header" data-wow-delay="0.2s">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo odio fugiat mollitia similique veritatis
-          laborum, accusantium assumenda architecto nam a suscipit voluptatibus, odit deleniti libero.
-        </div>
-        <button class="btn_global mt-5 btn_scroll mx-2">Prisförslag</button>
-        <button id="messageBtn" class="btn_global_outline_header mt-2 mb-5 btn_scroll mx-2">Meddelande</button>
+  <!--Nav-->
+  <nav class="navbar nav_bg container-fluid">
+    <a class="navbar-brand"><img src="./images/logoipsum-logo-1.svg"></a>
+    <form class="form-inline my-1">
+      <div class="md-form form-sm my-0">
       </div>
-    </div>
-
-    <div class="">
-      <div class="box_rel">
-          <img src="./images/img4.jpg" class="img_header carousel_img"/>
-        <div class="offert_info mt-3 mr-3 text-center rounded-circle">
-          <h6 class="offert_info_text">
-            <span class="offert_info_heading">Offertnummer</span><br />
-            <div class="">123 ABC</div>
-          </h6>
-          <h6 class="offert_info_text">
-            <span class="offert_info_heading">Offert datum</span> <br />
-            <div class="">2022-01-01</div>
-          </h6>
-          <h6 class="offert-date offert_info_text"></h6>
+      <button class="btn btn-outline-white btn-md my-0" type="submit">Kontakt</button>
+    </form>
+  </nav>
+  <!--Nav end-->
+  <!--Header start-->
+  <header class="header_bg pt-5 pb-5">
+    <div class="d-flex flex-column flex-md-row container-fluid justify-content-between align-items-center header">
+      <div class="col-md-6 pr-0 pr-xl-5">
+        <h1>This is the <span class="global_color2 font-weight-bold">heading</span> of the <span
+            class="global_color2 font-weight-bold">page</span></h1>
+        <div class="mt-5 mb-5 subheading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse obcaecati in dignissimos non enim possimus, magnam veritatis iste vitae tenetur culpa eaque tempore quos rem aperiam magni quisquam, labore impedit.</div>
+        <button class="btn btn-brown">kontakt</button>
+        <div class="mt-5 d-flex flex-column justify-content-between offert_info rounded">
+          <!-- <div class="d-flex justify-content-between align-items-center bg-white p-2 rounded">
+          <div>Offertnummer<br>123 abc</div>
+          <div>Offertnummer<br>123 abc</div>
+          <div>Offertnummer<br>123 abc</div>
+          <div>Prisförslag</div>
+        </div> -->
+        <!-- <button class="btn btn-brown">kontakt</button> -->
+        <!-- <div class="d-flex align-items-top bg-white p-3 mb-2 w-75">
+          <i class="fas fa-file-signature offert_icon mr-3"></i>
+          <h5 class="">Offertnummer <span class="">- 123 abc</span></h5>
         </div>
+        <div class="d-flex align-items-top bg-white p-3 mb-2 w-75">
+          <i class="fas fa-calendar-alt offert_icon mr-3"></i>
+          <h5 class="">Datum <span class="">- 2022-01-01</span></h5>
+        </div>
+        <div class="d-flex align-items-top bg-white p-3 mb-2 w-75">
+          <i class="fas fa-hourglass-half offert_icon mr-3 "></i>
+          <h5 class="">Sista dag <span class="">- 2022-02-01 (10 dagar kvar)</span></h5>
+        </div> -->
+        
+        </div>
+
       </div>
-    </div>
+      <div class="col-md-6 mt-0 mt-md-5 mb-0 mb-md-5 pt-0 pt-md-5 pb-0 pb-md-5 posistion-relative overflow-hidden">
+        <img src="./images/test.jpg" class="img-fluid rounded">
+        <img src="./images/26432.svg" class="svg_dots">
+      </div>
+      </div>
+  </header>
+  <!--Header end-->
+  <div class="scroll_down">
+    <button type="button" class="btn btn-brown waves-effect px-3"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
   </div>
+  <!--About start-->
+  <div class="container mt-5 pt-5 text-center">
+    <div>
+       <h2>About us</h2>
+    <h5>Who we are</h5>
+    <div class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nostrum quasi amet, delectus quam dolores provident eius nulla. Corporis unde officia odio quis dolorem, eius, dignissimos asperiores quae vitae voluptatum nihil magni esse nobis dolor repellat fuga, similique eos fugiat?</div>
+    </div>
+   <div>
+    
+   </div>
+  </div>
+  <!--About end-->
+
 
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

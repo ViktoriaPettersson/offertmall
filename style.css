@@ -1,0 +1,51 @@
+.global_color2 {
+  color: #a36858;
+}
+.global_color3 {
+  color: #847467;
+}
+h1 {
+  font-size: 4rem;
+  color: #847467;
+  font-family: "Montserrat", sans-serif;
+}
+h2 {
+  font-size: 2.5rem;
+  color: #a36858;
+  font-weight: 600 !important;
+  font-family: "Montserrat", sans-serif;
+}
+h5 {
+  font-size: 1.2rem;
+  color: #847467;
+}
+.subheading {
+  font-size: 1.2rem;
+}
+.header {
+  max-width: 100rem;
+}
+.header_bg {
+  background-color: #f4ded741;
+}
+.nav_bg {
+  background-color: #a36858;
+}
+.scroll_down {
+  position: absolute;
+  right: 0;
+  right: 6%;
+  margin-top: -2rem;
+}
+.offert_icon {
+  font-size: 1.5rem;
+  color: #795548;
+}
+.svg_dots {
+    width: 10rem;
+    opacity: 50%;
+    margin-left: -10rem;
+    margin-top: -10rem;
+    position: absolute;
+    z-index: -1;
+}

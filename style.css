@@ -1,17 +1,14 @@
 .global_color2 {
-  color: #a36858;
-}
-.global_color3 {
-  color: #847467;
+  color: #3f51b5;
 }
 h1 {
   font-size: 4rem;
-  color: #847467;
+  color: #2e2e2e;
   font-family: "Montserrat", sans-serif;
 }
 h2 {
   font-size: 2.5rem;
-  color: #a36858;
+  color: #2e2e2e;
   font-weight: 600 !important;
   font-family: "Montserrat", sans-serif;
 }
@@ -19,33 +16,61 @@ h5 {
   font-size: 1.2rem;
   color: #847467;
 }
+.section_spacing_top {
+  padding-top: 15% !important;
+}
+.section_spacing_bottom {
+  padding-bottom: 15% !important;
+}
 .subheading {
   font-size: 1.2rem;
 }
-.header {
-  max-width: 100rem;
-}
 .header_bg {
-  background-color: #f4ded741;
+  background-image: url(./images/img10.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header_text {
+  padding-top: 12%;
+  padding-bottom: 12%;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: rgba(255, 255, 255, 0.877);
 }
 .nav_bg {
-  background-color: #a36858;
+  background-color: #2e2e2e;
 }
-.scroll_down {
-  position: absolute;
-  right: 0;
-  right: 6%;
-  margin-top: -2rem;
+.offert_info {
+  padding: 2%;
+  color: #fff;
+  max-width: 50rem;
+  margin: auto;
+  margin-top: -4%;
+  z-index: 1;
+  position: relative;
+  background-color: #3f51b5;
 }
 .offert_icon {
-  font-size: 1.5rem;
-  color: #795548;
+  font-size: 1.2rem;
+  color: #3f51b5;
 }
-.svg_dots {
-    width: 10rem;
-    opacity: 50%;
-    margin-left: -10rem;
-    margin-top: -10rem;
-    position: absolute;
-    z-index: -1;
+.small_heading {
+  display: inline-block;
+  color: #3f51b5;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.services_bg {
+  background-image: url(./images/img3.jpg),
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background-blend-mode: overlay;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.services_text {
+  max-width: 40rem;
 }

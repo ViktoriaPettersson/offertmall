@@ -16,7 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -56,8 +56,7 @@
           </div>
         </div> -->
         <div class="mb-5">
-          <button class="btn btn-indigo">kontakt</button>
-          <button class="btn btn-outline-indigo">se pris</button>
+          <button class="ml-0 btn btn-indigo">prisförslag</button>
         </div>
 
       </div>
@@ -65,21 +64,21 @@
     </div>
   </header>
   <!--Header end-->
-  <div class="offert_info rounded">
+  <div class="offert_info z-depth-1">
     <!-- <button type="button" class="btn btn-indigo waves-effect px-3"><i class="fas fa-chevron-down" aria-hidden="true"></i></button> -->
 
     <div class="row">
-      <div class="my-2 my-md-0 col-md-4 d-flex flex-column align-items-center">
+      <div class="my-2 px-0 my-md-0 col-md-4 d-flex flex-column align-items-center">
         <h4 class="mb-0 pb-0">Offertnummer</h4>
         <div>123 ABC</div>
       </div>
-      <div class="my-2 my-md-0 col-md-4 d-flex flex-column align-items-center">
+      <div class="my-2 px-0 my-md-0 col-md-4 d-flex flex-column align-items-center">
         <h4 class="mb-0 pb-0">Datum</h4>
         <div>2022-01-01</div>
       </div>
-      <div class="my-2 my-md-0 col-md-4 d-flex flex-column align-items-center">
+      <div class="my-2 px-0 my-md-0 col-md-4 d-flex flex-column align-items-center">
         <h4 class="mb-0 pb-0">Sista dag</h4>
-        <div>2022-02-01 (10 dagar kvar)</div>
+        <div>2022-02-01</div>
       </div>
       <div></div>
       <div></div>
@@ -88,12 +87,31 @@
   </div>
   <!--About start-->
   <div class="container">
-    <div class="row section_spacing_top section_spacing_bottom">
-      <div class="col-md-12">
-        <div class="small_heading mb-1">Who we are</div>
-        <h2>About Us</h2>
-        <div class="mt-4 mt-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti debitis ratione asperiores blanditiis itaque in provident suscipit iusto, mollitia praesentium? Earum, voluptatibus. Eius iure omnis ut. Saepe rem cupiditate, possimus numquam ab corrupti nulla temporibus quasi facere iste deserunt, distinctio sed consequatur exercitationem quis unde cum magni reiciendis, soluta quidem maxime. Quidem in debitis magni aperiam nihil repudiandae assumenda, molestias excepturi eos voluptas provident ipsa optio fuga possimus doloribus, accusamus alias ut ex consequatur. Quidem ex sit officia repellat rem doloribus et, quos ullam esse sunt, quasi debitis molestias nulla, minus amet suscipit modi nobis ea. Architecto autem ratione corporis!</div>
-        <button class="ml-0 mt-4 btn btn-indigo">kontakt</button>
+    <div class="section_spacing_top section_spacing_bottom">
+      <div class="row">
+        <div class="col-md-4 mb-5">
+          <div class="d-inline-block">
+            <h2>Om oss</h2>
+            <div class="global_line"></div>
+          </div>
+          <div class="mt-4 about_cursive_text w-75">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo,
+            doloribus!</div>
+        </div>
+        <div class="col-md-8">
+          <div class="font-weight-bold mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis itaque enim
+            unde deserunt dolor, impedit voluptas animi accusamus quod dicta.</div>
+          <div class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti debitis ratione
+            asperiores
+            omnis ut. Saepe rem cupiditate, possimus numquam ab corrupti nulla temporibus quasi facere iste deserunt,
+            distinctio sed consequatur exercitationem quis.</div>
+          <div class="mb-5 mt-3">unde cum magni reiciendis, soluta quidem maxime. Quidem in
+            debitis magni aperiam nihil repudiandae assumenda, molestias excepturi eos voluptas provident ipsa optio
+            fuga
+            possimus doloribus, accusamus alias ut ex consequatur. Quidem ex sit officia repellat rem doloribus et, quos
+            ullam.</div>
+          <button class="ml-0 btn btn-indigo">kontakt</button>
+        </div>
+
       </div>
       <!-- <div class="col-md-6">
         <img src="./images/img10.jpg" class="mt-4 mt-md-0 img-fluid rounded">
@@ -102,61 +120,151 @@
   </div>
   <!--About end-->
 
-  <!--Services start-->
-  <div class="d-flex flex-column flex-md-row services justify-content-between align-items-stretch section_spacing_bottom">
-    <div class="col-md-6 services_bg text-center d-flex flex-column justify-content-center py-4">
-      <div class="small_heading mb-1 white-text">What we do</div>
-      <h2 class="text-white">Our Services</h2>
-      <div class="text-white subheading px-5 services_text mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque repudiandae obcaecati, illum porro pariatur quis sunt aspernatur minima perspiciatis distinctio.</div>
-    </div>
-    <div class="col-md-6 services_boxes">
-      <div class="row">
-        <div class="text-center col-md-6 services_box indigo">
-          <div class="px-5 px-md-0 px-lg-5 text-center indigo text-white">
-            
-              <p class="mt-4 pt-2"><i class="fas fa-building fa-3x"></i></p>
-              <h5 class="font-weight-normal"><a class="text-white">Lorem Ipsum</a></h5>
-              <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio id quos qui iste suscipit similique!</p>
-            
-          </div>
+  <!--Sammanställning start-->
+  <div class="elegant-color pt-3 pt-md-5 overview">
+    <div class="container">
+      <div class="text-center">
+        <div class="mb-5 pb-5 d-inline-block">
+          <h2 class="text-white pt-5 text-center">Sammanställning</h2>
+          <div class="global_line_light mx-auto"></div>
         </div>
-        <div class="text-center col-md-6 services_box indigo lighten-2">
-          <div class="px-5 px-md-0 px-lg-5 text-center text-white">
-            
-              <p class="mt-4 pt-2"><i class="fas fa-toolbox fa-3x"></i></p>
-              <h5 class="font-weight-normal"><a class="text-white">Lorem Ipsum</a></h5>
-              <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio id quos qui iste suscipit similique!</p>
-            
-          </div>
+      </div>
+
+      <div>
+        <div class="d-flex align-items-top mb-5">
+          <i class="far fa-check-circle check_icon mr-4"></i>
+          <div class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veritatis alias
+            aspernatur quia consequatur recusandae. Eum numquam incidunt, voluptatibus fuga quos quibusdam repellat modi
+            provident!</div>
         </div>
-        <div class="text-center col-md-6 services_box indigo lighten-2">
-          <div class="px-5 px-md-0 px-lg-5 text-center  text-white">
-            
-              <p class="mt-4 pt-2"><i class="fas fa-tools fa-3x"></i></p>
-              <h5 class="font-weight-normal"><a class="text-white">Lorem Ipsum</a></h5>
-              <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio id quos qui iste suscipit similique!</p>
-            
-          </div>
+        <div class="d-flex align-items-top mb-5">
+          <i class="far fa-check-circle check_icon mr-4"></i>
+          <div class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas iusto laudantium in,
+            enim optio eveniet saepe magnam assumenda porro eius.</div>
         </div>
-        <div class="text-center col-md-6 services_box indigo">
-          <div class="px-5 px-md-0 px-lg-5 text-center indigo text-white">
-            
-              <p class="mt-4 pt-2"><i class="fas fa-chart-line fa-3x"></i></p>
-              <h5 class="font-weight-normal"><a class="text-white">Lorem Ipsum</a></h5>
-              <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio id quos qui iste suscipit similique!</p>
-            
-          </div>
+        <div class="d-flex align-items-top mb-5">
+          <i class="far fa-check-circle check_icon mr-4"></i>
+          <div class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, architecto blanditiis.
+            Accusantium tempore fugit in vel necessitatibus ab quibusdam minus dolor. Corrupti, hic sed odio corporis
+            velit eius dignissimos ad optio! Ratione eos cum hic?</div>
         </div>
-      
+        <div class="d-flex align-items-top">
+          <i class="far fa-check-circle check_icon mr-4"></i>
+          <div class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veritatis alias
+            aspernatur quia consequatur recusandae. Eum numquam incidunt, voluptatibus fuga quos quibusdam repellat modi
+            provident!</div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="overview_img rounded z-depth-1"></div>
+  <!--Sammanställning end-->
 
-  <!--Services end-->
+  <!--Our services start-->
+  <div class="container mt-5 pt-0 pt-md-5 mb-5 pb-0 pb-xl-5 services">
+    <div class="text-center">
+      <div class="d-inline-block">
+        <h2 class="mt-0 mt-xl-5">Our services</h2>
+        <div class="global_line mx-auto mb-5"></div>
+      </div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. A consequatur quasi facere dignissimos earum,
+        provident voluptates eligendi ipsa, maxime cumque rem, sapiente sit non error. Quia eius, excepturi aperiam
+        similique suscipit officiis mollitia harum totam!</div>
+    </div>
 
-  <!--Our team start-->
+    <div class="mt-0 mt-lg-5 pt-5 mb-0 mb-md-5 row">
+      <div class="row">
 
-  <!--Our team end-->
+        <div class="col-md-6 col-xl-3 mb-4 px-5 px-md-3">
+          <div class="card text-center indigo text-white">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fas fa-pencil-alt fa-4x"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Lorem ipsum</a></h5>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem magni sequi?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 mb-4 px-5 px-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fas fa-building fa-4x grey-text"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">Lorem ipsum</a></h5>
+              <p class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem
+                magni sequi?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 mb-4 px-5 px-md-3">
+          <div class="card text-center indigo text-white">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fas fa-chart-line fa-4x"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Lorem ipsum</a></h5>
+              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem magni sequi?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3 px-5 px-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <p class="mt-4 pt-2"><i class="fas fa-tools fa-4x grey-text"></i></p>
+              <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">Lorem ipsum</a></h5>
+              <p class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem
+                magni sequi?</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--Our services end-->
+
+  <!--Price start-->
+
+  <div class="container pt-5 pb-5 mb-5">
+    <div class="d-inline-block">
+      <h2>Prisförslag</h2>
+      <div class="global_line"></div>
+    </div>
+  </div>
+
+  <!--Price end-->
+
+
+  <!--Footer start-->
+  <footer class="page-footer font-small elegant-color">
+
+    <!-- Footer Links -->
+    <div class="elegant-color container pt-5 pb-5 d-flex flex-column flex-md-row">
+      <div>
+        <h5 class="text-white text-uppercase font-weight-bold">Lorem ipsum</h5>
+        <div class="w-50 font-italic">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab impedit libero dolorum
+          accusantium et inventore tempore dolore facilis a iste!</div>
+      </div>
+      <div>
+        <h5 class="text-white text-uppercase font-weight-bold">Kontakt</h5>
+        <div>companymail@mail.com</div>
+        <div>+46 070 012 34 56</div>
+        <div>storgatan 4 Stockholm</div>
+      </div>
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+      <img src="./images/logoipsum-logo-1.svg">
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!--Footer end-->
+
 
 
 

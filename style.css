@@ -2,19 +2,34 @@
   color: #3f51b5;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #2e2e2e;
   font-family: "Montserrat", sans-serif;
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #2e2e2e;
   font-weight: 600 !important;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 h5 {
   font-size: 1.2rem;
   color: #847467;
+  font-family: 'Poppins', sans-serif;
+}
+div {
+  font-family: 'Poppins', sans-serif;
+}
+.global_line {
+  width: 40%;
+  padding-bottom: 0.5rem;
+  border-bottom: 5px solid #3f51b5;
+}
+.global_line_light {
+  width: 40%;
+  padding-bottom: 0.5rem;
+  border-bottom: 5px solid #ffffff;
 }
 .section_spacing_top {
   padding-top: 15% !important;
@@ -26,7 +41,7 @@ h5 {
   font-size: 1.2rem;
 }
 .header_bg {
-  background-image: url(./images/img10.jpg);
+  background-image: url(./images/img14.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,22 +70,26 @@ h5 {
   font-size: 1.2rem;
   color: #3f51b5;
 }
-.small_heading {
-  display: inline-block;
-  color: #3f51b5;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.about_cursive_text {
+  font-style: italic;
 }
-.services_bg {
-  background-image: url(./images/img3.jpg),
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-blend-mode: overlay;
-  background-position: center;
+.check_icon{
+  font-size: 1.5rem;
+  color: #fff;
+}
+.overview {
+  padding-bottom: 20rem;
+}
+.overview_img {
+  max-width: 80rem;
+  height: 40vh;
+  margin: auto;
+  margin-top: -15rem;
+  background-image: url(./images/img12.jpg);
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
-.services_text {
-  max-width: 40rem;
+.services {
+
 }

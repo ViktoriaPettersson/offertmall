@@ -11,15 +11,20 @@ h2 {
   color: #2e2e2e;
   font-weight: 600 !important;
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.5rem;
+  color: #2e2e2e;
+  font-weight: 600 !important;
+  font-family: "Montserrat", sans-serif;
 }
 h5 {
   font-size: 1.2rem;
   color: #847467;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 div {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .global_line {
   width: 40%;
@@ -40,8 +45,87 @@ div {
 .subheading {
   font-size: 1.2rem;
 }
+/*Buttons style*/
+.my_btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3f51b5 !important;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 0.4rem;
+  border: 2px solid #3f51b5;
+  box-shadow: inset 0 0 0 0 #3f51b5;
+  outline: none;
+}
+.my_btn:hover {
+  color: white !important;
+  box-shadow: inset 0 -100px 0 0 #3f51b5;
+}
+.my_btn:active {
+  transform: scale(0.9);
+  border-color: #3f51b5 !important;
+}
+/*Button light*/
+.my_btn_light {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border-radius: 0.4rem;
+  border: 2px solid #ffffff;
+  box-shadow: inset 0 0 0 0 #ffffff;
+  outline: none;
+}
+.my_btn_light:hover {
+  color: #2e2e2e !important;
+  box-shadow: inset 0 -100px 0 0 #ffffff;
+}
+.my_btn_light:active {
+  transform: scale(0.9);
+  border-color: #3f51b5 !important;
+}
+.add_option_btn {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #3f51b5;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3f51b5 !important;
+  box-shadow: inset 0 0 0 0 #3f51b5;
+  background: transparent;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+.add_option_btn:hover {
+  color: white !important;
+  box-shadow: inset 0 -100px 0 0 #3f51b5;
+}
+.add_option_btn:active {
+  transform: scale(0.9);
+  border-color: #3f51b5 !important;
+}
+/*Header style*/
 .header_bg {
-  background-image: url(./images/img14.jpg);
+  background-image: url(./images/img15.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,9 +136,6 @@ div {
   padding-left: 10%;
   padding-right: 10%;
   background-color: rgba(255, 255, 255, 0.877);
-}
-.nav_bg {
-  background-color: #2e2e2e;
 }
 .offert_info {
   padding: 2%;
@@ -70,10 +151,12 @@ div {
   font-size: 1.2rem;
   color: #3f51b5;
 }
+/*About style*/
 .about_cursive_text {
   font-style: italic;
 }
-.check_icon{
+/*overview style*/
+.check_icon {
   font-size: 1.5rem;
   color: #fff;
 }
@@ -90,6 +173,33 @@ div {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.services {
+/*services style*/
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
+/*Total price style*/
+.total_price {
+  max-width: 25rem;
+}
+/*Phone device*/
 
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  .subheading {
+    font-size: 1rem;
+  }
 }
